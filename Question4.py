@@ -1,40 +1,39 @@
 # Affiche un menu d'opérations disponibles
+def menu():
+    print("1. Addition")
+    print("2. Soustraction")
+    print("3. Multiplication")
+    print("4. Division")
+    return
 
+def division(): #Fonction qui effectue la division
+    if (secondNum == 0):
+        print("Erreur : Division par zero")
+    else:
+        answer = (firstNum / secondNum)
+        print("Resultat: " + str(answer))
+        return
+    
 # Demande à l'utilisateur de saisir le numéro de l'opération choisie
-
+menu()
+option = int(input())
 
 # Demande à l'utilisateur de saisir deux nombress
+firstNum = float(input("Entrez le premier nombre: "))
+secondNum = float(input("Entrez le second nombre: "))
 
-
-# Vérifie si l'opération choisie correspond à l'addition
-estAddition = 
-# Vérifie si l'opération choisie correspond à la soustraction
-estSoustraction = 
-# Vérifie si l'opération choisie correspond à la multiplication
-estMultiplication =
-# Vérifie si l'opération choisie correspond à la division
-estDivision =
-
-
-# Si l'opération choisie est l'addition, affiche le résultat de l'addition
-if estAddition:
-
-# Si l'opération choisie est la soustraction, affiche le résultat de la soustraction
-elif estSoustraction:
-
-# Si l'opération choisie est la multiplication, affiche le résultat de la multiplication
-elif estMultiplication:
-
-# Si l'opération choisie est la division
-elif estDivision:
-    # Vérifie si la division par zéro est tentée
-    conditionDivisionZero = 
-    # Si la division par zéro est tentée, affiche une erreur
-    if conditionDivisionZero:
-
-    # Sinon, affiche le résultat de la division
-    else:
-
-# Si l'opération choisie n'est pas valide, affiche un message d'erreur
+if option == 1:   #Addition
+    answer = (firstNum + secondNum)
+    print("Resultat: " + str(answer))
+elif option == 2: #Soustraction
+    answer = (firstNum - secondNum)
+    print("Resultat: " + str(answer))
+elif option == 3: #Multiplication
+    answer = (firstNum * secondNum)
+    print("Resultat: " + str(answer))
+elif option == 4: #Division
+    division()
 else:
+    print("Choix invalide")
+
 
