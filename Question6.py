@@ -1,31 +1,24 @@
-# Demandez à l'utilisateur d'entrer son poids en kg
+#Demander poids et taille
+weight = float(input("Entrez votre poids en kg: "))
+height = float(input("Entrez votre taille en m: "))
 
-# Demandez à l'utilisateur d'entrer sa taille en mètres
-
-
-# Calculez l'Indice de Masse Corporelle (IMC) en utilisant la formule IMC = poids / (taille^2)
-
-
-# Affichez l'IMC avec une précision de deux décimales
-
-
-# Définissez des conditions pour déterminer la catégorie de poids en fonction de l'IMC
-# Si l'IMC est inférieur à 18.5, la personne est en sous-poids
-estSousPoids = 
-
-# Si l'IMC est inférieur à 24.9, la personne a un poids normal
-estPoidsNormal = 
-
-# Si l'IMC est inférieur à 30, la personne est en surpoids
-estSurPoids =  
-
-# Utilisez des instructions conditionnelles pour afficher la catégorie de poids
-if estSousPoids:
-
-elif estPoidsNormal:
-
-elif estSurPoids:
-
+#Calculer IMC
+if height != 0:
+    imc = round((weight/(height**2)), 2)
+    print("Votre IMC est: " + str(imc))
 else:
+    print("Entrez une taille valide")
 
+#Insuffisance pondérale: IMC inférieur à 18.5.
+#Poids normal: IMC entre 18.5 et 24.9.
+#Surpoids: IMC entre 25 et 29.9.
+#Obésité: IMC de 30 ou plus
 
+if imc < 18.5:
+    print("Vous etes en sous-poids.")
+elif imc >=18.5 and imc <25:
+    print("Votre poids est normal.")
+elif imc >=25 and imc <30:
+    print("Vous etes en surpoids.")
+elif imc >=30:
+    print("Vous etes obese.")

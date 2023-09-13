@@ -1,14 +1,15 @@
 # Affiche un menu d'opérations disponibles
 def menu():
-    print("1. Addition")
-    print("2. Soustraction")
-    print("3. Multiplication")
-    print("4. Division")
+    print("Choisissez une operation:")
+    print("    1. Addition")
+    print("    2. Soustraction")
+    print("    3. Multiplication")
+    print("    4. Division")
     return
 
 def division(): #Fonction qui effectue la division
     if (secondNum == 0):
-        print("Erreur : Division par zero")
+        print("Erreur: Division par zero.")
     else:
         answer = float(firstNum / secondNum)
         print("Resultat: " + str(answer))
