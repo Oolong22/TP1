@@ -10,7 +10,7 @@ def division(): #Fonction qui effectue la division
     if (secondNum == 0):
         print("Erreur : Division par zero")
     else:
-        answer = (firstNum / secondNum)
+        answer = float(firstNum / secondNum)
         print("Resultat: " + str(answer))
         return
     
@@ -23,13 +23,13 @@ firstNum = float(input("Entrez le premier nombre: "))
 secondNum = float(input("Entrez le second nombre: "))
 
 if option == 1:   #Addition
-    answer = (firstNum + secondNum)
+    answer = float(firstNum + secondNum)
     print("Resultat: " + str(answer))
 elif option == 2: #Soustraction
-    answer = (firstNum - secondNum)
+    answer = float(firstNum - secondNum)
     print("Resultat: " + str(answer))
 elif option == 3: #Multiplication
-    answer = (firstNum * secondNum)
+    answer = float(firstNum * secondNum)
     print("Resultat: " + str(answer))
 elif option == 4: #Division
     division()
