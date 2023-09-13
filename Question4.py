@@ -1,16 +1,9 @@
 # Affiche un menu d'opérations disponibles
-print("Chosissez une operation:"
-        "1. Addition"
-        "2. Soustraction"
-        "3. Multiplication"
-        "4. Division")
-### Ne donne pas la bonne chose 
-
 
 # Demande à l'utilisateur de saisir le numéro de l'opération choisie
 
 
-# Demande à l'utilisateur de saisir deux nombres
+# Demande à l'utilisateur de saisir deux nombress
 
 
 # Vérifie si l'opération choisie correspond à l'addition
@@ -44,3 +37,4 @@ elif estDivision:
 
 # Si l'opération choisie n'est pas valide, affiche un message d'erreur
 else:
+
