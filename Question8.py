@@ -1,19 +1,18 @@
 # Demander à l'utilisateur de choisir le type de conversion
+def menu():
+    print("Type de conversion :")
+    print("1: Kilometres vers Miles (K vers M)")
+    print("2: Miles vers Kilometres (M vers K)")
 
 
-# Demande de la distance à l'utilisateur
+menu()
+option = int(input("Entrez votre choix (1 ou 2): "))
 
+distance = float(input("Entrez la distance a convertir: "))
 
-# Vérifie si l'utilisateur a choisi la conversion de kilomètres en miles
-choixKmEnMiles = 
-
-# Conversion de la distance en fonction du choix de l'utilisateur
-if choixKmEnMiles:
-    # Conversion de kilomètres en miles
-    
-    # Affichage du résultat de la conversion
-
-else:
-    # Conversion de miles en kilomètres   
-
-    # Affichage du résultat de la conversion
+if option == 1:
+    output = float(distance * 0.621371)
+    print(str(distance) + " kilometres equivalent a " + str(round(output, 2)) + " miles.")
+elif option == 2:
+    output = float(distance / 0.621371)
+    print(str(distance) + " miles equivalent a " + str(round(output, 2)) + " kilometres.")

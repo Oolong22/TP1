@@ -4,7 +4,7 @@
 #hour: 3600
 
 # Demande à l'utilisateur de saisir le nombre de secondes
-secondsEnd = seconds = float(input("Entrez le nombre de secondes: "))
+secondsEnd = seconds = int(input("Entrez le nombre de secondes: "))
 
 # Calcul du nombre d'années contenant ces secondes (en supposant une année de 365 jours)
 years = (seconds // 31536000)
@@ -21,42 +21,68 @@ seconds %= 3600
 # Calcul du nombre de minutes restantes dans le reste des secondes
 minutes = (seconds // 60)
 seconds %= 60
-# Affichage du nombre d'années, de semaines, de jours, d'heures, de minutes et de secondes
+
 
 text = ("En " + (str(int(secondsEnd))) + " secondes, on a: ")
 
+#Elimination des valeurs a 0
 if years != 0:
-    text += ((str(int(years))) + " annees, ")
+    if years == 1:
+        text += ((str(years)) + " annee, ")
+    else:
+        text += ((str(years)) + " annees, ")
 else:
     pass
 
 if weeks != 0:
-    text += ((str(int(weeks))) + " semaines, ")
+    if weeks == 1:
+        text += ((str(weeks)) + " semaine, ")
+    else:
+        text += ((str(weeks)) + " semaines, ")
 else:
     pass
 
 if days != 0:
-    text += ((str(int(days))) + " jours, ")
+    if days == 1:
+        text += ((str(days)) + " jour, ")
+    else:
+        text += ((str(days)) + " jours, ")
 else:
     pass
 
 if hours != 0:
-    text += ((str(int(hours))) + " heures, ")
+    if hours == 1:
+        text += ((str(hours)) + " heure, ")
+    else:
+        text += ((str(hours)) + " heures, ")
 else:
     pass
 
 if minutes != 0:
-    text += ((str(int(minutes))) + " minutes, ")
+    if minutes == 1:
+        text += ((str(minutes)) + " minute, ")
+    else:
+        text += ((str(minutes)) + " minutes, ")
 else:
     pass
 
+
 text = text[:-2]
 
-text += (" et " + (str(int(seconds))) + " secondes")
+if seconds == 1:
+    text += (" et " + (str(seconds)) + " seconde")
+else:
+    text += (" et " + (str(seconds)) + " secondes")
 
 text += (".")
 
-print(text)
+if secondsEnd < 1 and secondsEnd >=0:
+    print("En 0 secondes, on a 0 secondes")
+elif secondsEnd < 0:
+    print("Nombre invalide")
+else:
+    print(text)
+
 
 
 
